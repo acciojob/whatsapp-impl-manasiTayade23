@@ -32,7 +32,7 @@ public class WhatsappRepository {
     public String createUser(String name, String mobile) throws Exception {
        if(userHM!=null && !userHM.containsKey(name)){
            User temp=new User(name,mobile);
-           return "Success";
+           return "SUCCESS";
        }
        throw new Exception("User already exist");
     }
@@ -75,7 +75,7 @@ public class WhatsappRepository {
                     return msg.size();
                }
            }
-           throw new Exception("User is not member of group Cannot send msg");
+           throw new Exception("You are not allowed to send message");
        }
         throw new Exception("Group does not exist");
     }
@@ -89,9 +89,9 @@ public class WhatsappRepository {
                        return "Success";
                    }
                }
-               throw new Exception("User is not participant");
+               throw new Exception("User is not a participant");
            }
-           throw new Exception("Approver is not current Admin");
+           throw new Exception("Approver does not have rights");
        }
        throw new Exception("Group does not exist");
     }
