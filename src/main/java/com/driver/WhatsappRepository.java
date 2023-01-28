@@ -32,7 +32,7 @@ public class WhatsappRepository {
     public String createUser(String name, String mobile) throws Exception {
        if(userHM!=null && !userHM.containsKey(name)){
            User temp=new User(name,mobile);
-           return "Success";
+           return "SUCCESS";
        }
        throw new Exception("User already exist");
     }
