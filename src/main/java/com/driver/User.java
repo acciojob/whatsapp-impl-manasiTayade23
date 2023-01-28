@@ -4,9 +4,7 @@ public class User {
     private String name;
     private String mobile;
 
-    public User(String mobile) {
-        this.mobile = mobile;
-    }
+
 
     public String getName() {
         return name;
